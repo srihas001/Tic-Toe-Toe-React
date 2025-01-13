@@ -80,16 +80,15 @@ const TicTacToe = () => {
       titleRef.current.innerHTML = "It's a Draw! Well Played.";
     }
   }
-  const reset=()=>{
-    setLock(false);
-    data=["","","","","","","","",""];
-    titleRef.current.innerHTML='Welcome to Tic-Tac-Toe Game in <span>React</span>'
-    box.map((e)=>{
-      e.current.innerHTML=""
+  const reset = () => {
+  setLock(false);
+  data = ["", "", "", "", "", "", "", "", ""];
+  titleRef.current.innerHTML = 'Welcome to Tic-Tac-Toe Game in <span>React</span>';
+  box.forEach((e) => {
+    e.current.innerHTML = "";
+  });
+};
 
-    })
-    
-  }
   return (
     <div className='container'>
       <h1 className="title" ref={titleRef}>Welcome  to Tic-Tac-Toe Game in <span>React</span> </h1>
